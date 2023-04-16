@@ -1,5 +1,14 @@
 class Persona {
-  constructor(nombre, dni, nacionalidad, edad, añoDeNacimiento, sexo, peso, altura) {
+  constructor(
+    nombre,
+    dni,
+    nacionalidad,
+    edad,
+    añoDeNacimiento,
+    sexo,
+    peso,
+    altura
+  ) {
     this.nombre = nombre;
     this.dni = dni;
     this.nacionalidad = nacionalidad;
@@ -80,18 +89,24 @@ esteban.mostrarDatosPersona();
 esteban.generarDNI();
 
 const formularioPersona = document.getElementById("formularioPersona");
-nombre = document.getElementById("nombre")
-dni = document.getElementById("dni")
-nacionalidad = document.getElementById("nacionalidad")
-edad = document.getElementById("edad")
-añoDeNacimiento = document.getElementById("añoDeNacimiento")
-sexo = document.getElementById("sexo")
-peso = document.getElementById("peso")
-altura = document.getElementById("altura")
-btnAgregarPersona = document.getElementById("btnAgregarPersona")
+let nombre = document.getElementById("nombre");
+dni = document.getElementById("dni");
+nacionalidad = document.getElementById("nacionalidad");
+edad = document.getElementById("edad");
+añoDeNacimiento = document.getElementById("añoDeNacimiento");
+sexo = document.getElementById("sexo");
+peso = document.getElementById("peso");
+altura = document.getElementById("altura");
+btnAgregarPersona = document.getElementById("btnAgregarPersona");
+let listadoDePersonas = [];
 
-formularioPersona.addEventListener("submit", (e)=>{
-  e.preventDefault()
-  agregarPersona()
-})
+formularioPersona.addEventListener("submit", (e) => {
+  e.preventDefault();
+  agregarPersona();
+});
 
+function agregarPersona() {
+  let persona = new Persona(nombre.value, dni.value, nacionalidad.value, edad.value, añoDeNacimiento.value, sexo.value, peso.value, altura.value);
+  listadoDePersonas.push(persona)
+  formularioPersona.reset()
+}
