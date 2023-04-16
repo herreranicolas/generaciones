@@ -17,62 +17,79 @@
 <body class="text-primary-emphasis">
   <main class="container">
     <h1 class="text-center">Generaciones</h1>
-    <form class="row border border-primary rounded p-1 fw-bold" id="formularioPersona">
+    <form class="border rounded fw-bold p-2" id="formularioPersona">
       <h2 class="mb-3">Crear nueva persona</h2>
-      <div class="col-12 col-lg-6">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
-          <label for="nombre">Nombre completo</label>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+            <label for="nombre">Nombre completo</label>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-lg-6">
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="dni" placeholder="DNI" required>
-          <label for="dni">DNI</label>
+        <div class="col-12 col-md-6">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="dni" placeholder="DNI" required>
+            <label for="dni">DNI</label>
+          </div>
         </div>
-      </div>
-      <div class="col-6 col-lg-4">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="nacionalidad" placeholder="Nacionalidad" required>
-          <label for="nacionalidad">Nacionalidad</label>
+        <div class="col-12 col-md-4">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nacionalidad" placeholder="Nacionalidad" required>
+            <label for="nacionalidad">Nacionalidad</label>
+          </div>
         </div>
-      </div>
-      <div class="col-4 col-lg-4">
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="edad" placeholder="Edad" required>
-          <label for="edad">Edad</label>
+        <div class="col-12 col-md-4">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="edad" placeholder="Edad" required>
+            <label for="edad">Edad</label>
+          </div>
         </div>
-      </div>
-      <div class="col-8 col-lg-4">
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="añoDeNacimiento" placeholder="Año de Nacimiento" min="1924"
-            max="2023" required>
-          <label for="añoDeNacimiento">Año de Nacimiento</label>
+        <div class="col-12 col-md-4">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="añoDeNacimiento" placeholder="Año de Nacimiento" min="1924"
+              max="2023" required>
+            <label for="añoDeNacimiento">Año de Nacimiento</label>
+          </div>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="sexo" placeholder="Sexo" required>
-          <label for="sexo">Sexo</label>
+        <div class="col-12 col-md-4">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="sexo" placeholder="Sexo" required>
+            <label for="sexo">Sexo</label>
+          </div>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="peso" placeholder="Peso" required>
-          <label for="peso">Peso</label>
+
+        <div class="col-12 col-md-4">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="peso" placeholder="Peso" required>
+            <label for="peso">Peso</label>
+          </div>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="form-floating mb-3">
-          <input type="number" class="form-control" id="altura" placeholder="Altura" step="0.01" required>
-          <label for="altura">Altura</label>
+        <div class="col-12 col-md-4">
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="altura" placeholder="Altura" step="0.01" required>
+            <label for="altura">Altura</label>
+          </div>
         </div>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn rounded fw-bold" id="btnAgregarPersona">Agregar</button>
+        <button type="submit" class="btn rounded" id="btnAgregarPersona">Agregar</button>
       </div>
     </form>
-
+    <section class="border p-2 my-3 rounded" id="contenedorPersonas">
+      <h2>Lista de Personas</h2>
+      <ul class="list-group p-2">
+        <li class="list-group-item">No hay personas ingresadas.</li>
+        <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+          Usuario 1
+          <div class="btn-group">
+            <button type="button" class="btn rounded me-md-2">Datos</button>
+            <button type="button" class="btn rounded me-md-2">Edad</button>
+            <button type="button" class="btn rounded me-md-2">Generación</button>
+            <button type="button" class="btn rounded">Borrar</button>
+          </div>
+        </li> -->
+      </ul>
+    </section>
   </main>
   <footer>
 

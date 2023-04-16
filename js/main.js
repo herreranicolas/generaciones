@@ -98,7 +98,8 @@ sexo = document.getElementById("sexo");
 peso = document.getElementById("peso");
 altura = document.getElementById("altura");
 btnAgregarPersona = document.getElementById("btnAgregarPersona");
-let listadoDePersonas = [];
+listadoDePersonas = [];
+contenedorPersonas = document.getElementById("contenedorPersonas")
 
 formularioPersona.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -109,4 +110,9 @@ function agregarPersona() {
   let persona = new Persona(nombre.value, dni.value, nacionalidad.value, edad.value, añoDeNacimiento.value, sexo.value, peso.value, altura.value);
   listadoDePersonas.push(persona)
   formularioPersona.reset()
+  mostrarDatos()
+}
+
+function mostrarDatos() {
+  listadoDePersonas.map(persona => console.log(persona))
 }

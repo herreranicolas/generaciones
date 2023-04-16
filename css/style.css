@@ -6,16 +6,34 @@ h1 {
   color: #e57200;
 }
 
-form {
+form,
+section {
   background-color: #f7f7f7;
 }
 
 .border {
-  border-color: #004074!important;
+  border-color: #004074 !important;
 }
 
-.btn, .btn:hover{
+.btn,
+.btn:hover {
   background-color: #e57200;
   border: none;
   color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .list-group-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-group-item div {
+    gap: 0.25rem;
+  }
+
+  .list-group-item div button {
+    margin-top: 0.5rem;
+  }
 }
