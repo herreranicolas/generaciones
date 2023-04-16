@@ -1,0 +1,21 @@
+body {
+  color: #004074;
+}
+
+h1 {
+  color: #e57200;
+}
+
+form {
+  background-color: #f7f7f7;
+}
+
+.border {
+  border-color: #004074!important;
+}
+
+.btn, .btn:hover{
+  background-color: #e57200;
+  border: none;
+  color: #fff;
+}
