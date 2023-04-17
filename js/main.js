@@ -113,16 +113,48 @@ formularioPersona.addEventListener("submit", (e) => {
 });
 
 function agregarPersona() {
+  let nombreValor = nombre.value.trim();
+  let dniValor = dni.value.trim();
+  let nacionalidadValor = nacionalidad.value.trim();
+  let edadValor = parseInt(edad.value.trim());
+  let añoDeNacimientoValor = parseInt(añoDeNacimiento.value.trim());
+  let sexoValor = sexo.value.trim();
+  let pesoValor = parseFloat(peso.value.trim());
+  let alturaValor = parseFloat(altura.value.trim());
+
+  if (
+    nombreValor === "" ||
+    dniValor === "" ||
+    nacionalidadValor === "" ||
+    isNaN(edadValor) ||
+    isNaN(añoDeNacimientoValor) ||
+    sexoValor === "" ||
+    isNaN(pesoValor) ||
+    isNaN(alturaValor)
+  ) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: "Todos los campos son requeridos y deben tener valores numéricos (en caso de edad, año de nacimiento, peso y altura).",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#e57200",
+      background: "#f7f7f7",
+      color: "#004074",
+    });
+    return;
+  }
+
   let persona = new Persona(
-    nombre.value,
-    dni.value,
-    nacionalidad.value,
-    edad.value,
-    añoDeNacimiento.value,
-    sexo.value,
-    peso.value,
-    altura.value
+    nombreValor,
+    dniValor,
+    nacionalidadValor,
+    edadValor,
+    añoDeNacimientoValor,
+    sexoValor,
+    pesoValor,
+    alturaValor
   );
+
   listadoDePersonas.push(persona);
   formularioPersona.reset();
   mostrarPersona();
