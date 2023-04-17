@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="text-primary-emphasis">
+<body class="text-primary-emphasis d-flex flex-column justify-content-center align-items-center">
   <main class="container">
     <h1 class="text-center">Generaciones</h1>
     <form class="border rounded fw-bold p-2" id="formularioPersona">
@@ -75,25 +75,19 @@
         <button type="submit" class="btn rounded" id="btnAgregarPersona">Agregar</button>
       </div>
     </form>
-    <section class="border p-2 my-3 rounded" id="contenedorPersonas">
+    <section class="border p-2 my-3 rounded">
       <h2>Lista de Personas</h2>
-      <ul class="list-group p-2">
+      <ul class="list-group p-2 container" id="contenedorPersonas">
         <li class="list-group-item">No hay personas ingresadas.</li>
-        <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
-          Usuario 1
-          <div class="btn-group">
-            <button type="button" class="btn rounded me-md-2">Datos</button>
-            <button type="button" class="btn rounded me-md-2">Edad</button>
-            <button type="button" class="btn rounded me-md-2">Generación</button>
-            <button type="button" class="btn rounded">Borrar</button>
-          </div>
-        </li> -->
       </ul>
     </section>
   </main>
-  <footer>
-
+  <footer class="mt-auto fw-bold">
+    <div class="container text-center">
+      <p>&copy; Todos los derechos reservados. Hecho con ❤ por Nicolas Herrera.</p>
+    </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
